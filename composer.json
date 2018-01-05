@@ -10,6 +10,7 @@
     "license": "WTFPL",
     "type": "project",
     "require": {
+        "php": ">=7.0",
         "illuminate/console": "^5.5",
         "zircote/swagger-php": "^2.0"
     },
