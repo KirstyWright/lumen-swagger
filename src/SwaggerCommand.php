@@ -32,7 +32,7 @@ class SwaggerCommand extends \Illuminate\Console\Command
 
         file_put_contents($this->getPath(), $swagger);
 
-        $this->info('Generated at "' . realpath($path) . '"');
+        $this->info('Generated at "' . $this->getPath() . '"');
     }
 
     protected function getPath() : string
