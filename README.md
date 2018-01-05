@@ -1,7 +1,7 @@
-[![Build Status](https://travis-ci.org/lumen-swagger.svg?branch=master)](https://travis-ci.org/lumen-swagger)
-[![Latest Stable Version](https://poser.pugx.org/lumen-swagger/v/stable)](https://packagist.org/packages/lumen-swagger)
-[![Total Downloads](https://poser.pugx.org/lumen-swagger/downloads)](https://packagist.org/packages/lumen-swagger)
-[![License](https://poser.pugx.org/lumen-swagger/license)](https://packagist.org/packages/lumen-swagger)
+[![Build Status](https://travis-ci.org/benjamincrozat/lumen-swagger.svg?branch=master)](https://travis-ci.org/benjamincrozat/lumen-swagger)
+[![Latest Stable Version](https://poser.pugx.org/benjamincrozat/lumen-swagger/v/stable)](https://packagist.org/packages/benjamincrozat/lumen-swagger)
+[![License](https://poser.pugx.org/benjamincrozat/lumen-swagger/license)](https://packagist.org/packages/benjamincrozat/lumen-swagger)
+[![Total Downloads](https://poser.pugx.org/benjamincrozat/lumen-swagger/downloads)](https://packagist.org/packages/benjamincrozat/lumen-swagger)
 
 # Lumen Swagger
 
