@@ -19,14 +19,11 @@ class SwaggerCommand extends \Illuminate\Console\Command
      */
     public function handle()
     {
-        $swagger = \Swagger\scan(...[
-            $this->scanOption() ?? app()->basePath(),
-            ['exclude' => ['tests', 'vendor']],
-        ]);
+        $swagger = \Swagger\scan($this->scanOption(), ['exclude' => ['tests', 'vendor']]);
 
-        file_put_contents($this->pathOption(), $swagger);
+        file_put_contents($path = $this->pathOption(), $swagger);
 
-        $this->info('Generated at "' . $this->pathOption() . '"');
+        $this->info('Generated at "' . $path . '"');
     }
 
     protected function pathOption() : string
@@ -38,10 +35,10 @@ class SwaggerCommand extends \Illuminate\Console\Command
 
     protected function scanOption() : string
     {
-        return $this->relativeOrAbsolute($this->option('scan'));
+        return $this->relativeOrAbsolute($this->scanOption() ?? app()->basePath());
     }
 
-    protected function relativeOrAbsolute(string $path)
+    protected function relativeOrAbsolute(string $path) : ?string
     {
         return starts_with($path, '/') ? $path : realpath(__DIR__ . '/' . $path);
     }
