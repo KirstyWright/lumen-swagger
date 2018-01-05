@@ -9,7 +9,7 @@ class CommandTest extends TestCase
 
         Artisan::call('swagger', [
             '--path' => $path,
-            '--scan' => realpath(__DIR__),
+            '--scan' => __DIR__,
         ]);
 
         $this->assertTrue(is_file($path));

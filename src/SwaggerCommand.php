@@ -19,19 +19,30 @@ class SwaggerCommand extends \Illuminate\Console\Command
      */
     public function handle()
     {
-        $args = $this->option('scan')
-            ? [$this->option('scan')]
-            : [app()->basePath(), ['exclude' => ['tests', 'vendor']]];
+        $swagger = \Swagger\scan(...[
+            $this->scanOption() ?? app()->basePath(),
+            ['exclude' => ['tests', 'vendor']],
+        ]);
 
-        $swagger = \Swagger\scan(...$args);
+        file_put_contents($this->pathOption(), $swagger);
 
-        file_put_contents($this->getPath(), $swagger);
-
-        $this->info('Generated at "' . $this->getPath() . '"');
+        $this->info('Generated at "' . $this->pathOption() . '"');
     }
 
-    protected function getPath() : string
+    protected function pathOption() : string
     {
-        return $this->option('path') ?? app()->basePath() . '/swagger.json';
+        return $this->relativeOrAbsolute(
+            $this->option('path') ?? app()->basePath() . '/swagger.json'
+        );
+    }
+
+    protected function scanOption() : string
+    {
+        return $this->relativeOrAbsolute($this->option('scan'));
+    }
+
+    protected function relativeOrAbsolute(string $path)
+    {
+        return starts_with($path, '/') ? $path : realpath(__DIR__ . '/' . $path);
     }
 }
