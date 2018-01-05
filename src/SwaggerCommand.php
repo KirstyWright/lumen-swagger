@@ -19,16 +19,11 @@ class SwaggerCommand extends \Illuminate\Console\Command
      */
     public function handle()
     {
-        if ($scan = $this->option('scan')) {
-            $swagger = \Swagger\scan($scan);
-        } else {
-            $swagger = \Swagger\scan(app()->basePath(), [
-                'exclude' => [
-                    'tests',
-                    'vendor',
-                ],
-            ]);
-        }
+        $args = $this->option('scan')
+            ? [$this->option('scan')]
+            : [app()->basePath(), ['exclude' => ['tests', 'vendor']]];
+
+        $swagger = \Swagger\scan(...$args);
 
         file_put_contents($this->getPath(), $swagger);
 
