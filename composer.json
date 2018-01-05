@@ -1,0 +1,16 @@
+{
+    "name": "benjamincrozat/lumen-swagger",
+    "description": "Generate API documentation with swag.",
+    "keywords": [
+        "api",
+        "lumen",
+        "restful",
+        "swagger"
+    ],
+    "license": "WTFPL",
+    "type": "project",
+    "require": {
+        "illuminate/console": "^5.5",
+        "zircote/swagger-php": "^2.0"
+    }
+}
