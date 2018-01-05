@@ -23,6 +23,7 @@ Using the command is pretty straightforward:
 
 ```bash
 php artisan swagger
+
 Generated at "/path/to/project/swagger.json"
 ```
 
@@ -30,6 +31,7 @@ You can also specify a custom path:
 
 ```bash
 php artisan swagger -p "/path/to/project/whatever/documentation.json"
+
 Generated at "/path/to/project/whatever/documentation.json"
 ```
 
