@@ -19,7 +19,7 @@ Add the following line in your `bootstrap/app.php`:
 $app->register(BC\LumenSwagger\ServiceProvider::class);
 ```
 
-Using the command is pretty straightforward:
+Once you annotated your models and controllers ([see documentation here](https://github.com/zircote/swagger-php)), using the command is pretty straightforward:
 
 ```bash
 php artisan swagger
