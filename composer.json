@@ -27,5 +27,12 @@
         "classmap": [
             "tests"
         ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BC\\LumenSwagger\\ServiceProvider"
+            ]
+        }
     }
 }
