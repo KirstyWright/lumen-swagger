@@ -40,6 +40,6 @@ class SwaggerCommand extends \Illuminate\Console\Command
 
     protected function relativeOrAbsolute(string $path) : ?string
     {
-        return starts_with($path, '/') ? $path : realpath(__DIR__ . '/' . $path);
+        return starts_with($path, '/') ? $path : app()->basePath($path);
     }
 }
