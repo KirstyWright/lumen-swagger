@@ -30,7 +30,7 @@ Generated at "/path/to/project/swagger.json"
 You can also specify a custom path:
 
 ```bash
-php artisan swagger --path "/path/to/project/whatever/documentation.json"
+php artisan swagger --path /path/to/project/whatever/documentation.json
 
 Generated at "/path/to/project/whatever/documentation.json"
 ```
@@ -38,7 +38,7 @@ Generated at "/path/to/project/whatever/documentation.json"
 And even change the scanned location:
 
 ```bash
-php artisan swagger --scan "/path/to/project/whatever"
+php artisan swagger --scan /path/to/project/whatever
 
 Generated at "/path/to/project/swagger.json"
 ```
