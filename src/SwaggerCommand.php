@@ -35,7 +35,7 @@ class SwaggerCommand extends \Illuminate\Console\Command
 
     protected function scanOption() : string
     {
-        return $this->relativeOrAbsolute($this->scanOption() ?? app()->basePath());
+        return $this->relativeOrAbsolute($this->option('scan') ?? app()->basePath());
     }
 
     protected function relativeOrAbsolute(string $path) : ?string
