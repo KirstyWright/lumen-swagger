@@ -26,7 +26,7 @@ $app->register(BC\LumenSwagger\ServiceProvider::class);
 
 ### Laravel
 
-If you wish to run this package, you can easily do it. Just install it via Composer and you're done, thanks to its automatic packages discovery.
+If you wish to run this package, you can easily do it. Just install it via Composer and you're done, thanks to its automatic package discovery.
 
 ```bash
 composer require benjamincrozat/lumen-swagger
@@ -45,7 +45,7 @@ Generated at "/path/to/project/swagger.json"
 You can also specify a custom path:
 
 ```bash
-php artisan swagger --path /path/to/project/whatever/documentation.json
+php artisan swagger --path whatever/documentation.json
 
 Generated at "/path/to/project/whatever/documentation.json"
 ```
@@ -53,7 +53,7 @@ Generated at "/path/to/project/whatever/documentation.json"
 And even change the scanned location:
 
 ```bash
-php artisan swagger --scan /path/to/project/whatever
+php artisan swagger --scan whatever
 
 Generated at "/path/to/project/swagger.json"
 ```
