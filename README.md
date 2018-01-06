@@ -26,7 +26,7 @@ $app->register(BC\LumenSwagger\ServiceProvider::class);
 
 ### Laravel
 
-If you wish to run this package, you can easily do it. Just install it via Composer and you're done, thanks to its automatic package discovery.
+If you wish to run this package on Laravel, you can easily do it. Just install it via Composer and you're done, thanks to its automatic package discovery.
 
 ```bash
 composer require benjamincrozat/lumen-swagger
