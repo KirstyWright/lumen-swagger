@@ -29,7 +29,7 @@ class SwaggerCommand extends \Illuminate\Console\Command
     protected function pathOption() : string
     {
         return $this->relativeOrAbsolute(
-            $this->option('path') ?? app()->basePath() . '/swagger.json'
+            $this->option('path') ?? app()->basePath('swagger.json')
         );
     }
 
