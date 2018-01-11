@@ -63,7 +63,7 @@ Generated at "/path/to/project/swagger.json"
 In my own opinion, I think annotations are great for this use case, but messy. Writing API specs in your code isn't the cleanest thing to do. Your files quickly get unecessarly bloated. In [Lumen Boilerplate](https://github.com/benjamincrozat/lumen-boilerplate), I opted for a single file `config/swagger.php`. Just run the following command to scan the `config` directory:
 
 ```ash
-php artisan swagger config
+php artisan swagger --scan config
 ```
 
 ## License
