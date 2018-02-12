@@ -1,9 +1,11 @@
 <?php
 
-abstract class TestCase extends \Orchestra\Testbench\TestCase
+abstract class TestCase extends Orchestra\Testbench\TestCase
 {
     protected function getPackageProviders($app)
     {
-        return [\BC\LumenSwagger\ServiceProvider::class];
+        return [
+            BC\LumenSwagger\ServiceProvider::class,
+        ];
     }
 }
